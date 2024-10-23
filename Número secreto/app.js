@@ -1,14 +1,15 @@
 alert("Boas-vindas ao jogo do número secreto")
 let numeroSecreto = 5;
 let chute;
-let tentativa =1;
+let tentativas =1;
 
 //enquanto = while
 while(chute != numeroSecreto){
         chute = prompt("Escolha um número entre 1 e 10");
 
     if(chute == numeroSecreto){
-        alert(`Isso aí!!! Você descobriu o número secreto ${numeroSecreto} com ${tentativa} tentativas.`);
+        
+        break
     } 
     else{
         if(numeroSecreto> chute){
@@ -18,4 +19,12 @@ while(chute != numeroSecreto){
             alert(`O número secreto é menor que ${chute}`);
         }
     } tentativa++;
+
+    if(tentativa>1){
+        alert(`Isso ai!! Você acertou o número secreto ${numeroSecreto} com ${tentativas} tentativas`);
+    } else{
+        alert(`Isso aí!! Você acertou o número secreto ${numeroSecreto} com ${tentativa} tentativa`);
+    }
 } 
+
+let palavraTentativa = tentativa > 1 ? "tentativas": "tentativa" ;
